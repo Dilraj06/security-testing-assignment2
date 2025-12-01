@@ -40,13 +40,10 @@ jobs:
         run: |
           bandit -r . -f html -o bandit-report.html
 
-      # Step 5: Upload Bandit report as artifact
+      # Step 5: Upload Bandit report as artifact (updated to v4)
       - name: Upload Bandit Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bandit-report
           path: bandit-report.html
-
-
-
 
